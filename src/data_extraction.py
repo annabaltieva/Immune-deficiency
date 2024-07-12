@@ -30,11 +30,11 @@ def extract_all_therapies(pdf_dir):
     return therapies
 
 if __name__ == "__main__":
-    pdf_dir = "/Users/giordani/Модели/immune_deficiency_detection/data/"
+    pdf_dir = "../data/"
     print("Current working directory:", os.getcwd())
     print(f"Starting extraction in directory: {pdf_dir}")
     therapies = extract_all_therapies(pdf_dir)
-    output_file = '/Users/giordani/Модели/immune_deficiency_detection/data/extracted_therapies.json'
+    output_file = '../data/extracted_therapies.json'
     with open(output_file, 'w') as f:
         json.dump(therapies, f, ensure_ascii=False, indent=4)
     print(f"Extracted therapies saved to {output_file}")
